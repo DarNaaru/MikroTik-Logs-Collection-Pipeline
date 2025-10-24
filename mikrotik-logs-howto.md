@@ -286,14 +286,13 @@ Connections → Data sources → Loki → URL: `http://YOUR_SERVER_IP:3100` → 
 - Nane: `search`
 - Label: `Поиск`
 
-<img width="1892" height="355" alt="image" src="https://github.com/user-attachments/assets/c84ec206-65c4-4ca1-9aa9-64813c3a24cd" />
+![Variables](https://github.com/user-attachments/assets/3b68ee4c-6a82-41df-9dc8-fdbcba6355fd)
 
 (Пока не вставите query запрос ниже, галочек справа от variables не будет)
 
 3) Кнопка “Preview of values” должна показать реальные значения. Если список пустой:
 
-<img width="1810" height="207" alt="image" src="https://github.com/user-attachments/assets/04344fd8-b253-4471-80a9-0e2f6f3c1e35" />
-
+![Preview of values](https://github.com/user-attachments/assets/e8a6bbf9-5c66-466d-a2b6-b27f38ba077c)
 
 - Проверьте, что в Loki есть логи со стримом `{job="mikrotik"}` и меткой `identity`
 - Увеличьте Time range (например, Last 24 hours)
@@ -329,6 +328,7 @@ curl -s 'http://YOUR_SERVER_IP:3100/loki/api/v1/label/actor/values'
 | label_format level="{{ if or (eq .level `err`) (eq .level `error`) }}error{{ else if or (eq .level `crit`) (eq .level `critical`) }}critical{{ else }}{{ .level }}{{ end }}"
 | line_format "{{ if eq .level `critical` }}🟥{{ else if eq .level `error` }}🔴{{ else }}  {{ end }} {{.identity}} [{{.level}}] {{.program}} — {{.message}}"
 ```
+![Test](https://github.com/user-attachments/assets/b101ac6b-9595-478c-b118-612224e3d126)
 
 ## 6) Эксплуатация и отладка
 
