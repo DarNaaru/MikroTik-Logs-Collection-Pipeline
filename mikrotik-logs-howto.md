@@ -292,7 +292,7 @@ Connections → Data sources → Loki → URL: `http://YOUR_SERVER_IP:3100` → 
 
 3) Кнопка “Preview of values” должна показать реальные значения. Если список пустой:
 
-![Preview of values](https://github.com/user-attachments/assets/e8a6bbf9-5c66-466d-a2b6-b27f38ba077c)
+![Preview of values](https://github.com/user-attachments/assets/ae66c28c-b9a2-4a49-95e9-51fe990f245d)
 
 - Проверьте, что в Loki есть логи со стримом `{job="mikrotik"}` и меткой `identity`
 - Увеличьте Time range (например, Last 24 hours)
