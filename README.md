@@ -125,7 +125,8 @@ docker logs promtail --tail=30
 | line_format "{{ if eq .level `critical` }}🟥{{ else if eq .level `error` }}🔴{{ else }}  {{ end }} {{.identity}} [{{.level}}] {{.program}} — {{.message}}"
 ```
 
-![Dashboard](https://github.com/user-attachments/assets/66daa3c3-3ec0-4ddc-bb40-f3237048397a)
+![Test](https://github.com/user-attachments/assets/9082f43d-9ac1-4700-89e1-c3b350c1f4e0)
+
 
 ## Конфигурация
 
